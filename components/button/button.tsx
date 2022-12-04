@@ -28,9 +28,10 @@ function isUnBorderedButtonType(type: ButtonType | undefined) {
   return type === 'text' || type === 'link';
 }
 
-// Insert one space between two chinese characters automatically.
+// 在两个汉字之间自动插入一个空格
 function insertSpace(child: React.ReactElement | string | number, needInserted: boolean) {
-  // Check the child if is undefined or null.
+  // 检查子对象是否为undefined或null。
+
   if (child === null || child === undefined) {
     return;
   }
@@ -78,7 +79,9 @@ function spaceChildren(children: React.ReactNode, needInserted: boolean) {
   );
 }
 
+// 转换成元组
 const ButtonTypes = tuple('default', 'primary', 'ghost', 'dashed', 'link', 'text');
+// 通过元组转换成联合类型
 export type ButtonType = typeof ButtonTypes[number];
 const ButtonShapes = tuple('default', 'circle', 'round');
 export type ButtonShape = typeof ButtonShapes[number];
@@ -116,6 +119,7 @@ export interface BaseButtonProps {
 // Typescript will make optional not optional if use Pick with union.
 // Should change to `AnchorButtonProps | NativeButtonProps` and `any` to `HTMLAnchorElement | HTMLButtonElement` if it fixed.
 // ref: https://github.com/ant-design/ant-design/issues/15930
+// a链接按钮props类型
 export type AnchorButtonProps = {
   href: string;
   target?: string;
@@ -123,14 +127,17 @@ export type AnchorButtonProps = {
 } & BaseButtonProps &
   Omit<React.AnchorHTMLAttributes<any>, 'type' | 'onClick'>;
 
+// 原生按钮Props
 export type NativeButtonProps = {
   htmlType?: ButtonHTMLType;
   onClick?: React.MouseEventHandler<HTMLElement>;
 } & BaseButtonProps &
   Omit<React.ButtonHTMLAttributes<any>, 'type' | 'onClick'>;
 
+// 按钮props类型，将所有属性转成可选，a链接props和原生按钮类型的交叉类型
 export type ButtonProps = Partial<AnchorButtonProps & NativeButtonProps>;
 
+// 混合组件类型
 type CompoundedComponent = React.ForwardRefExoticComponent<
   ButtonProps & React.RefAttributes<HTMLElement>
 > & {
