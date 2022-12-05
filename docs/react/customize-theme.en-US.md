@@ -242,7 +242,7 @@ Ant Design default using CSS-in-JS with `:where` Selector to reduce priority to 
 
 ```tsx
 import React from 'react';
-import { StyleProvider } from '@ant-design/cssinjs';
+import { StyleProvider } from '@ant-design/cssinjs/es';
 
 export default () => (
   <StyleProvider hashPriority="high">
@@ -269,7 +269,7 @@ Use `@ant-design/cssinjs` to extract style:
 ```tsx
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs';
+import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs/es';
 
 export default () => {
   // SSR Render
@@ -306,7 +306,7 @@ Since `<style />` tag insertion is different from normal DOM in Shadow DOM scena
 ```tsx
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { StyleProvider } from '@ant-design/cssinjs';
+import { StyleProvider } from '@ant-design/cssinjs/es';
 
 const shadowRoot = someEle.attachShadow({ mode: 'open' });
 const container = document.createElement('div');

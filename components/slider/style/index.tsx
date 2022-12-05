@@ -1,4 +1,4 @@
-import type { CSSObject } from '@ant-design/cssinjs';
+import type { CSSObject } from '@ant-design/cssinjs/es';
 import type * as React from 'react';
 import { TinyColor } from '@ctrl/tinycolor';
 import type { FullToken, GenerateStyle } from '../../theme/internal';

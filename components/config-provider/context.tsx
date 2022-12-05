@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { DerivativeFunc } from '@ant-design/cssinjs';
+import type { DerivativeFunc } from '@ant-design/cssinjs/es';
 import type { RequiredMark } from '../form/Form';
 import type { Locale } from '../locale-provider';
 import type { AliasToken, MapToken, OverrideToken, SeedToken } from '../theme/interface';
@@ -37,7 +37,9 @@ export interface ConfigConsumerProps {
   getTargetContainer?: () => HTMLElement;
   getPopupContainer?: (triggerNode?: HTMLElement) => HTMLElement;
   rootPrefixCls?: string;
+  /** icon前缀，默认为anticon */
   iconPrefixCls: string;
+  /** 获取类名前缀，默认是antd-xxx，如果有自定义前缀就用自定义，如果第一个参数没传，默认返回antd */
   getPrefixCls: (suffixCls?: string, customizePrefixCls?: string) => string;
   renderEmpty?: RenderEmptyHandler;
   csp?: CSPConfig;
@@ -65,6 +67,7 @@ export interface ConfigConsumerProps {
   theme?: ThemeConfig;
 }
 
+/** 获取类名前缀，默认是antd-xxx，如果有自定义前缀就用自定义，如果第一个参数没传，默认返回antd */
 const defaultGetPrefixCls = (suffixCls?: string, customizePrefixCls?: string) => {
   if (customizePrefixCls) return customizePrefixCls;
 
@@ -73,8 +76,9 @@ const defaultGetPrefixCls = (suffixCls?: string, customizePrefixCls?: string) =>
 
 // zombieJ: 🚨 Do not pass `defaultRenderEmpty` here since it will cause circular dependency.
 export const ConfigContext = React.createContext<ConfigConsumerProps>({
-  // We provide a default function for Context without provider
+  /** 获取类名前缀，默认是antd-xxx，如果有自定义前缀就用自定义，如果第一个参数没传，默认返回antd */
   getPrefixCls: defaultGetPrefixCls,
+  /** icon前缀，默认为anticon */
   iconPrefixCls: defaultIconPrefixCls,
 });
 

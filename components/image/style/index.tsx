@@ -1,4 +1,4 @@
-import type { CSSObject } from '@ant-design/cssinjs';
+import type { CSSObject } from '@ant-design/cssinjs/es';
 import { TinyColor } from '@ctrl/tinycolor';
 import { genModalMaskStyle } from '../../modal/style';
 import { initZoomMotion, initFadeMotion } from '../../style/motion';

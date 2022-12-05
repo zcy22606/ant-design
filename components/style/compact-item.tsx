@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import type { CSSObject } from '@ant-design/cssinjs';
+import type { CSSObject } from '@ant-design/cssinjs/es';
 import type { DerivativeToken } from '../theme/internal';
 
 // handle border collapse
@@ -13,7 +13,6 @@ function compactItemBorder(
     '&-item:not(&-last-item)': {
       marginInlineEnd: -token.lineWidth,
     },
-
     '&-item': {
       [`&:hover ${childCombinator}, &:focus ${childCombinator}, &:active ${childCombinator}`]: {
         zIndex: 2,

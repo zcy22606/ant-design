@@ -1,6 +1,6 @@
 import fs from 'fs';
 import type { IApi, IRoute } from 'dumi';
-import { extractStyle } from '@ant-design/cssinjs';
+import { extractStyle } from '@ant-design/cssinjs/es';
 import ReactTechStack from 'dumi/dist/techStacks/react';
 import sylvanas from 'sylvanas';
 

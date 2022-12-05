@@ -1,4 +1,4 @@
-import type { DerivativeFunc } from '@ant-design/cssinjs';
+import type { DerivativeFunc } from '@ant-design/cssinjs/es';
 import genControlHeight from '../shared/genControlHeight';
 import type { SeedToken, MapToken } from '../../interface';
 import defaultAlgorithm from '../default';

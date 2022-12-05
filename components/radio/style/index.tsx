@@ -1,4 +1,4 @@
-import { Keyframes } from '@ant-design/cssinjs';
+import { Keyframes } from '@ant-design/cssinjs/es';
 import type { FullToken, GenerateStyle } from '../../theme/internal';
 import { genComponentStyleHook, mergeToken } from '../../theme/internal';
 import { genFocusOutline, resetComponent } from '../../style';

@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import type { CSSObject } from '@ant-design/cssinjs';
+import type { CSSObject } from '@ant-design/cssinjs/es';
 import type { DerivativeToken } from '../theme/internal';
 
 export { operationUnit } from './operationUnit';
@@ -66,6 +66,7 @@ export const clearFix = (): CSSObject => ({
   },
 });
 
+/** 获取a标签样式 */
 export const genLinkStyle = (token: DerivativeToken): CSSObject => ({
   a: {
     color: token.colorLink,
@@ -103,9 +104,9 @@ export const genLinkStyle = (token: DerivativeToken): CSSObject => ({
   },
 });
 
+/** 获取公共样式 */
 export const genCommonStyle = (token: DerivativeToken, componentPrefixCls: string): CSSObject => {
   const { fontFamily, fontSize } = token;
-
   const rootPrefixSelector = `[class^="${componentPrefixCls}"], [class*=" ${componentPrefixCls}"]`;
 
   return {
@@ -129,12 +130,14 @@ export const genCommonStyle = (token: DerivativeToken, componentPrefixCls: strin
   };
 };
 
+/** 生成focus轮廓 */
 export const genFocusOutline = (token: DerivativeToken): CSSObject => ({
   outline: `${token.lineWidth * 4}px solid ${token.colorPrimaryBorder}`,
   outlineOffset: 1,
   transition: 'outline-offset 0s, outline 0s',
 });
 
+/** 生成focus样式 */
 export const genFocusStyle = (token: DerivativeToken): CSSObject => ({
   '&:focus-visible': {
     ...genFocusOutline(token),

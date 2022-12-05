@@ -1,6 +1,6 @@
 /* eslint-disable no-redeclare */
-import type { CSSInterpolation } from '@ant-design/cssinjs';
-import { useStyleRegister } from '@ant-design/cssinjs';
+import type { CSSInterpolation } from '@ant-design/cssinjs/es';
+import { useStyleRegister } from '@ant-design/cssinjs/es';
 import { useContext } from 'react';
 import { genCommonStyle, genLinkStyle } from '../../style';
 import { ConfigContext } from '../../config-provider/context';
@@ -47,7 +47,7 @@ export default function genComponentStyleHook<ComponentName extends OverrideComp
     const { getPrefixCls, iconPrefixCls } = useContext(ConfigContext);
     const rootPrefixCls = getPrefixCls();
 
-    // Generate style for all a tags in antd component.
+    /** 为antd组件中的所有标签生成样式。 */
     useStyleRegister({ theme, token, hashId, path: ['Shared', rootPrefixCls] }, () => [
       {
         // Link

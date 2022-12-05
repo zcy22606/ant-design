@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+/** 尺寸 */
 export type SizeType = 'small' | 'middle' | 'large' | undefined;
 
 const SizeContext = React.createContext<SizeType>(undefined);

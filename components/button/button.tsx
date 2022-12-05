@@ -169,19 +169,28 @@ const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (pr
   } = props;
 
   const { getPrefixCls, autoInsertSpaceInButton, direction } = React.useContext(ConfigContext);
+  /** 得到的结果是antd-btn */
   const prefixCls = getPrefixCls('btn', customizePrefixCls);
 
   // Style
   const [wrapSSR, hashId] = useStyle(prefixCls);
 
+  /** 按钮尺寸，'small' | 'middle' | 'large' */
   const size = React.useContext(SizeContext);
   // ===================== Disabled =====================
+  /** 获取默认disabled状态 */
   const disabled = React.useContext(DisabledContext);
+  /** 根据用户传入设置disabled状态 */
   const mergedDisabled = customDisabled ?? disabled;
 
+  /** 获取组尺寸 */
   const groupSize = React.useContext(GroupSizeContext);
+
+  /** loading状态管理 */
   const [innerLoading, setLoading] = React.useState<Loading>(!!loading);
+  /** 中文？？ */
   const [hasTwoCNChar, setHasTwoCNChar] = React.useState(false);
+  /** 获取组件dom实例 */
   const buttonRef = (ref as any) || React.createRef<HTMLElement>();
   const isNeedInserted = () =>
     React.Children.count(children) === 1 && !icon && !isUnBorderedButtonType(type);

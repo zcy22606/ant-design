@@ -1,4 +1,4 @@
-import type { CSSObject } from '@ant-design/cssinjs';
+import type { CSSObject } from '@ant-design/cssinjs/es';
 import { initZoomMotion } from '../../style/motion';
 import type {
   FullToken,

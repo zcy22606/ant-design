@@ -1,7 +1,7 @@
 import React from 'react';
 // Reference: https://github.com/ant-design/ant-design/pull/24003#discussion_r427267386
 // eslint-disable-next-line import/no-unresolved
-import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs';
+import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs/es';
 import dayjs from 'dayjs';
 import glob from 'glob';
 import { configureToMatchImageSnapshot } from 'jest-image-snapshot';

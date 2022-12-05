@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import type { CSSObject } from '@ant-design/cssinjs';
+import type { CSSObject } from '@ant-design/cssinjs/es';
 
 export const roundedArrow = (
   width: number,

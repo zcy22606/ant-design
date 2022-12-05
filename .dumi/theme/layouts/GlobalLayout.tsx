@@ -2,7 +2,7 @@ import React, { startTransition, useLayoutEffect } from 'react';
 import { useOutlet } from 'dumi';
 import { ConfigProvider, theme as antdTheme } from 'antd';
 import type { ThemeConfig } from 'antd/es/config-provider/context';
-import { createCache, StyleProvider } from '@ant-design/cssinjs';
+import { createCache, StyleProvider } from '@ant-design/cssinjs/es';
 import ThemeSwitch from '../common/ThemeSwitch';
 import useLocation from '../../hooks/useLocation';
 

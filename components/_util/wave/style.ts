@@ -1,4 +1,4 @@
-import { Keyframes, useStyleRegister } from '@ant-design/cssinjs';
+import { Keyframes, useStyleRegister } from '@ant-design/cssinjs/es';
 import { useContext } from 'react';
 import { ConfigContext } from '../../config-provider';
 import type { AliasToken, GenerateStyle, UseComponentStyleResult } from '../../theme/internal';

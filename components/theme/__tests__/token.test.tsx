@@ -1,4 +1,4 @@
-import { Theme } from '@ant-design/cssinjs';
+import { Theme } from '@ant-design/cssinjs/es';
 import * as React from 'react';
 import genRadius from '../themes/shared/genRadius';
 import { render, renderHook } from '../../../tests/utils';

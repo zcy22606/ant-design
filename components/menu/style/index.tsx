@@ -1,5 +1,5 @@
 import { TinyColor } from '@ctrl/tinycolor';
-import type { CSSObject } from '@ant-design/cssinjs';
+import type { CSSObject } from '@ant-design/cssinjs/es';
 import { genCollapseMotion, initSlideMotion, initZoomMotion } from '../../style/motion';
 import type { FullToken, GenerateStyle, UseComponentStyleResult } from '../../theme/internal';
 import { genComponentStyleHook, mergeToken } from '../../theme/internal';

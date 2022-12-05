@@ -1,4 +1,4 @@
-import { useStyleRegister } from '@ant-design/cssinjs';
+import { useStyleRegister } from '@ant-design/cssinjs/es';
 import { resetIcon } from '../../style';
 import { useToken } from '../../theme/internal';
 

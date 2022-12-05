@@ -1,4 +1,4 @@
-import type { CSSObject } from '@ant-design/cssinjs';
+import type { CSSObject } from '@ant-design/cssinjs/es';
 import type { GenerateStyle } from '../../theme/internal';
 import type { TableToken } from './index';
 import { operationUnit } from '../../style';

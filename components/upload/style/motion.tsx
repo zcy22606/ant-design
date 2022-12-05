@@ -1,4 +1,4 @@
-import { Keyframes } from '@ant-design/cssinjs';
+import { Keyframes } from '@ant-design/cssinjs/es';
 import type { UploadToken } from '.';
 import type { GenerateStyle } from '../../theme/internal';
 

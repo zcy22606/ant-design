@@ -1,4 +1,4 @@
-import type { CSSObject } from '@ant-design/cssinjs';
+import type { CSSObject } from '@ant-design/cssinjs/es';
 import type { StepsToken } from '.';
 import type { GenerateStyle } from '../../theme/internal';
 

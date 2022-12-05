@@ -1,5 +1,5 @@
-import type { CSSInterpolation, Theme } from '@ant-design/cssinjs';
-import { createTheme, useCacheToken, useStyleRegister } from '@ant-design/cssinjs';
+import type { CSSInterpolation, Theme } from '@ant-design/cssinjs/es';
+import { createTheme, useCacheToken, useStyleRegister } from '@ant-design/cssinjs/es';
 import React from 'react';
 import version from '../version';
 import type {
@@ -43,7 +43,9 @@ export type {
 // ================================ Context =================================
 // To ensure snapshot stable. We disable hashed in test env.
 export const defaultConfig = {
+  /** 主题预设 */
   token: defaultSeedToken,
+  /** 哈希 */
   hashed: true,
 };
 
@@ -57,16 +59,21 @@ export const DesignTokenContext = React.createContext<{
 // ================================== Hook ==================================
 export function useToken(): [Theme<SeedToken, MapToken>, GlobalToken, string] {
   const {
+    /** 预设主题样式 */
     token: rootDesignToken,
+    /** 哈希 */
     hashed,
+    /** 无 */
     theme,
+    /** 无 */
     components,
   } = React.useContext(DesignTokenContext);
 
   const salt = `${version}-${hashed || ''}`;
 
-  const mergedTheme = theme || defaultTheme;
+  /** 合并主题 */
 
+  const mergedTheme = theme || defaultTheme;
   const [token, hashId] = useCacheToken<GlobalToken, SeedToken>(
     mergedTheme,
     [defaultSeedToken, rootDesignToken],

@@ -1,4 +1,4 @@
-import type { CSSInterpolation, CSSObject } from '@ant-design/cssinjs';
+import type { CSSInterpolation, CSSObject } from '@ant-design/cssinjs/es';
 import type { FullToken, GenerateStyle } from '../../theme/internal';
 import { genComponentStyleHook, mergeToken } from '../../theme/internal';
 import genGroupStyle from './group';
@@ -472,6 +472,7 @@ const genBlockButtonStyle: GenerateStyle<ButtonToken> = (token) => {
 
 // ============================== Export ==============================
 export default genComponentStyleHook('Button', (token) => {
+  /** token为antd-btn */
   const { controlTmpOutline, paddingContentHorizontal } = token;
 
   const buttonToken = mergeToken<ButtonToken>(token, {

@@ -8,7 +8,7 @@
 }
 */
 import { gold } from '@ant-design/colors';
-import type { CSSObject } from '@ant-design/cssinjs';
+import type { CSSObject } from '@ant-design/cssinjs/es';
 import type { TypographyToken } from '.';
 import { initInputToken } from '../../input/style';
 import type { GenerateStyle } from '../../theme/internal';

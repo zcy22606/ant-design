@@ -1,5 +1,6 @@
 import type { PresetColorType, SeedToken } from '../internal';
 
+/** 预设的颜色 */
 export const defaultPresetColors: PresetColorType = {
   blue: '#1677ff',
   purple: '#722ED1',
@@ -16,11 +17,12 @@ export const defaultPresetColors: PresetColorType = {
   lime: '#A0D911',
 };
 
+/** 种子令牌，种子标记 */
 const seedToken: SeedToken = {
-  // preset color palettes
+  /** 预设调色板 */
   ...defaultPresetColors,
 
-  // Color
+  /** 主题色 */
   colorPrimary: '#1677ff',
   colorSuccess: '#52c41a',
   colorWarning: '#faad14',
@@ -30,17 +32,18 @@ const seedToken: SeedToken = {
 
   colorBgBase: '',
 
-  // Font
+  /** 字体 */
   fontFamily: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
 'Noto Color Emoji'`,
   fontSize: 14,
 
-  // Line
+  /** 线宽 */
   lineWidth: 1,
+  /** 线形 */
   lineType: 'solid',
 
-  // Motion
+  /** 动效 */
   motionUnit: 0.1,
   motionBase: 0,
   motionEaseOutCirc: `cubic-bezier(0.08, 0.82, 0.17, 1)`,
@@ -52,7 +55,7 @@ const seedToken: SeedToken = {
   motionEaseInQuint: `cubic-bezier(0.645, 0.045, 0.355, 1)`,
   motionEaseOutQuint: `cubic-bezier(0.23, 1, 0.32, 1)`,
 
-  // Radius
+  /** 圆角 */
   borderRadius: 6,
 
   // Size

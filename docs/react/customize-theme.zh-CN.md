@@ -242,7 +242,7 @@ Ant Design 的 CSS-in-JS 默认通过 `:where` 选择器降低 CSS Selector 优�
 
 ```tsx
 import React from 'react';
-import { StyleProvider } from '@ant-design/cssinjs';
+import { StyleProvider } from '@ant-design/cssinjs/es';
 
 export default () => (
   <StyleProvider hashPriority="high">
@@ -269,7 +269,7 @@ export default () => (
 ```tsx
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs';
+import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs/es';
 
 export default () => {
   // SSR Render
@@ -306,7 +306,7 @@ export default () => {
 ```tsx
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { StyleProvider } from '@ant-design/cssinjs';
+import { StyleProvider } from '@ant-design/cssinjs/es';
 
 const shadowRoot = someEle.attachShadow({ mode: 'open' });
 const container = document.createElement('div');

@@ -1,4 +1,4 @@
-import { createTheme } from '@ant-design/cssinjs';
+import { createTheme } from '@ant-design/cssinjs/es';
 import IconContext from '@ant-design/icons/lib/components/Context';
 import { FormProvider as RcFormProvider } from 'rc-field-form';
 import type { ValidateMessages } from 'rc-field-form/lib/interface';

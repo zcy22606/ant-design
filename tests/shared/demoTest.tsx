@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { renderToString } from 'react-dom/server';
 import glob from 'glob';
-import { StyleProvider, createCache } from '@ant-design/cssinjs';
+import { StyleProvider, createCache } from '@ant-design/cssinjs/es';
 import { excludeWarning } from './excludeWarning';
 import { render } from '../utils';
 import { TriggerMockContext } from './demoTestContext';
