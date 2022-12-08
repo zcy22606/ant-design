@@ -45,11 +45,11 @@ demo:
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
-| defaultValue | 默认选中的选项 | string\[] | \[] |  |
+| defaultValue | 默认选中的选项 | (string \| number)\[] | \[] |  |
 | disabled | 整组失效 | boolean | false |  |
 | name | CheckboxGroup 下所有 `input[type="checkbox"]` 的 `name` 属性 | string | - |  |
 | options | 指定可选项 | string\[] \| number\[] \| Option\[] | \[] |  |
-| value | 指定选中的选项 | string\[] | \[] |  |
+| value | 指定选中的选项 | (string \| number)\[] | \[] |  |
 | onChange | 变化时的回调函数 | function(checkedValue) | - |  |
 
 ##### Option
